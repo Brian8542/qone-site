@@ -1,0 +1,58 @@
+/* QONE modern.v22 — warm-paper minimal restyle */
+:root{
+  --paper:#FFFFFF; --canvas:#F7F5F1; --mist:#F1EEE8; --brand-tint:#EDF3FE;
+  --ink:#191C20; --ink-soft:#5E646B; --ink-faint:#8A9097; --line:#E7E3DB;
+  --brand:#0B5CD7; --brand-deep:#0A3D8F;
+}
+body{background:var(--canvas);color:var(--ink)}
+.block{padding:110px 0}
+.sec-title{letter-spacing:-.035em;font-weight:760}
+.sec-sub,.body-p{line-height:1.8}
+.kicker{letter-spacing:.22em}
+/* frosted sticky header */
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.72);
+ backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);
+ border-bottom:1px solid rgba(0,0,0,.05)}
+/* pill buttons */
+.btn{border-radius:999px;font-weight:700;padding:13px 26px}
+.btn-primary{background:var(--brand);box-shadow:0 8px 22px -10px rgba(11,92,215,.55)}
+.btn-primary:hover{background:var(--brand-deep)}
+/* soft cards */
+.prod-card,.cat-preview-card,.story-card,.pt-card,.faq-item,.global-card,.exp-card{
+ border-radius:18px;border-color:var(--line)}
+.prod-card,.cat-preview-card{box-shadow:0 2px 10px -6px rgba(25,28,32,.08)}
+.mist,.block.mist{background:var(--mist)}
+/* partnership band with real imagery */
+.pband{background:linear-gradient(100deg,rgba(8,36,84,.94) 22%,rgba(10,61,143,.82) 55%,rgba(11,92,215,.55)),
+ url('/assets/img/partner-band.jpg') center 42%/cover no-repeat}
+.pband::before{display:none}
+/* CTA bands get foam texture */
+.cta-band{background:linear-gradient(120deg,rgba(10,61,143,.96),rgba(11,92,215,.88)),
+ url('/assets/img/cta-texture-bg.jpg') center/cover no-repeat;border-radius:22px}
+/* slogan ticker: ink modern */
+.tick{background:#14171B}
+.tick span{-webkit-text-stroke:1.5px rgba(255,255,255,.5)}
+/* page hero with split-fade imagery */
+.pg-hero.hasimg{position:relative;min-height:380px;display:flex;align-items:center;overflow:hidden;
+ border-bottom:1px solid var(--line)}
+.pg-hero.hasimg::before{content:'';position:absolute;inset:0;
+ background:var(--pgimg) right center/cover no-repeat}
+.pg-hero.hasimg::after{content:'';position:absolute;inset:0;
+ background:linear-gradient(90deg,var(--canvas) 0 42%,rgba(247,245,241,.95) 56%,rgba(247,245,241,.55) 72%,rgba(247,245,241,0) 88%)}
+.pg-hero.hasimg .wrap{position:relative;z-index:2}
+@media(max-width:760px){.pg-hero.hasimg::after{background:linear-gradient(90deg,var(--canvas) 0 12%,rgba(247,245,241,.86) 40%,rgba(247,245,241,.55) 100%)}}
+/* homepage editorial 3-up */
+.spaces{padding:110px 0;background:var(--paper)}
+.spaces .sp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:44px}
+.spaces figure{margin:0;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3;
+ box-shadow:0 18px 44px -22px rgba(25,28,32,.28)}
+.spaces img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.spaces figure:hover img{transform:scale(1.05)}
+.spaces figcaption{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.86);
+ backdrop-filter:blur(8px);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;color:var(--ink)}
+/* modern hero focal */
+.hero.ed .hero-bg{background-image:url('/assets/img/hero-editorial.jpg') !important;background-position:62% 50% !important}
+section.hero.ed::after{background:linear-gradient(100deg,rgba(12,18,26,.72) 6%,rgba(12,18,26,.38) 44%,rgba(12,18,26,.06) 74%),
+ linear-gradient(0deg,rgba(12,18,26,.5),transparent 32%)}
+/* real before photo — no artificial filter */
+.rfl-ba .ba-before{filter:none !important}
