@@ -2,99 +2,130 @@
 
 User-agent: *
 Allow: /
+Disallow: /assets/ad/docs/
 
 # Search engines
 User-agent: Googlebot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Naverbot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Yeti
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: YandexBot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: YandexAdditional
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: YandexAdditionalBot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: YandexImages
 Allow: /
+Disallow: /assets/ad/docs/
 
 # AI assistants & answer engines — explicitly allowed so QONE / CUSHIONI
 # products can be found, summarized and cited in AI search and chat answers.
 User-agent: GPTBot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Bytespider
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: CCBot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: cohere-ai
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Amazonbot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Meta-ExternalAgent
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Claude-User
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: DuckAssistBot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: MistralAI-User
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Applebot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: YouBot
 Allow: /
+Disallow: /assets/ad/docs/
 
 User-agent: Google-CloudVertexBot
 Allow: /
+Disallow: /assets/ad/docs/
 
 # AI summary files: /llms.txt and /llms-full.txt
 Sitemap: https://www.qone.kr/sitemap.xml
