@@ -1,6 +1,6 @@
 /* QONE Yiwu Collection — pegboard + hang-tag system */
 :root{
-  --peg:#EEF0F3;--hole:#C9CED8;--ink:#0E1430;--ink2:#4A5170;--ink3:#62688A;--paper:#FFFFFF;--line:#D9DDE5;
+  --peg:#EEF0F3;--hole:#C9CED8;--ink:#0E1430;--ink2:#4A5170;--ink3:#3A4164;--paper:#FFFFFF;--line:#D9DDE5;
   --y:#FFD21F;--p:#FF2E74;--b:#2443E8;--b2:#1830B4;
   --fd:"Archivo",system-ui,sans-serif;--fb:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
   --w:1240px;--r:14px;--hd:64px;--hh:64px;

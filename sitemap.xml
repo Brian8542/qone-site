@@ -2802,30 +2802,60 @@
   </url>
   <url>
     <loc>https://www.qone.kr/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/privacy/" />
     <lastmod>2026-11-12</lastmod>
-    <priority>0.6</priority>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.qone.kr/ko/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/privacy/" />
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.qone.kr/ja/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/privacy/" />
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.qone.kr/ru/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/privacy/" />
     <lastmod>2026-11-12</lastmod>
-    <priority>0.6</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.qone.kr/costco/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/" />
     <lastmod>2026-11-12</lastmod>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-pallet-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-cart-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-cart-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-tower-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-display-wall-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/au-travel-cube-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/kr-display-3d-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/pk-pallet-render-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-box-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-pallets-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-container-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.webp</image:loc></image:image>
     <priority>1.0</priority>
   </url>
   <url>
@@ -2833,7 +2863,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/about/" />
     <lastmod>2026-11-12</lastmod>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-container-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-pallet-960.jpg</image:loc></image:image>
     <priority>0.9</priority>
   </url>
@@ -2842,7 +2872,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/forward-base/" />
     <lastmod>2026-11-12</lastmod>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/au-travel-cube-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/pk-pallet-wrap-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/pk-pallet-render-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-pallets-960.jpg</image:loc></image:image>
@@ -2850,9 +2880,9 @@
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-truck-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-seal-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-container-open-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-boxes-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-boxes-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-truck-unload-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-pallet-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/kr-display-giheung-960.jpg</image:loc></image:image>
     <priority>0.9</priority>
@@ -2861,9 +2891,9 @@
     <loc>https://www.qone.kr/costco/track-record/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/track-record/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-price-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-cart-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-price-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-cart-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-box-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-price-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-neihu-960.jpg</image:loc></image:image>
@@ -2886,7 +2916,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/why-qone/" />
     <lastmod>2026-11-12</lastmod>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-container-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-pallet-960.jpg</image:loc></image:image>
     <priority>0.9</priority>
   </url>
@@ -2912,16 +2942,16 @@
     <loc>https://www.qone.kr/costco/proposal-guide/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/proposal-guide/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-price-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-price-960.webp</image:loc></image:image>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.qone.kr/costco/requirements/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/requirements/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-pallet-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-pallet-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-box-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.webp</image:loc></image:image>
     <priority>0.9</priority>
   </url>
   <url>
@@ -2930,7 +2960,7 @@
     <lastmod>2026-11-12</lastmod>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-warehouse-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-pallets-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-stack-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-stack-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-container-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-seal-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-truck-960.jpg</image:loc></image:image>
@@ -2946,7 +2976,7 @@
     <loc>https://www.qone.kr/costco/quality-audit/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/quality-audit/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-folded-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/pk-pallet-wrap-960.jpg</image:loc></image:image>
     <priority>0.9</priority>
@@ -2955,8 +2985,8 @@
     <loc>https://www.qone.kr/costco/oem-pb/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/oem-pb/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/pk-pallet-render-960.jpg</image:loc></image:image>
     <priority>0.9</priority>
   </url>
@@ -2964,7 +2994,7 @@
     <loc>https://www.qone.kr/costco/facts/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/facts/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-neihu-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-display-wall-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/au-pallets-960.jpg</image:loc></image:image>
@@ -2987,10 +3017,10 @@
     <loc>https://www.qone.kr/costco/cases/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/cases/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-box-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-tower-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-display-shelf-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-display-shelf-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/kr-display-3d-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/au-travel-cube-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-pallets-960.jpg</image:loc></image:image>
@@ -3002,12 +3032,12 @@
     <loc>https://www.qone.kr/costco/cases/japan-camping-mat/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/cases/japan-camping-mat/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-pallet-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-price-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-cart-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-pallet-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-price-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-cart-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-outdoor-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-folded-960.jpg</image:loc></image:image>
     <priority>0.8</priority>
@@ -3019,7 +3049,7 @@
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-price-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-display-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-box-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-aisle-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-aisle-960.webp</image:loc></image:image>
     <priority>0.8</priority>
   </url>
   <url>
@@ -3030,7 +3060,7 @@
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-aisle-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-tower-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-neihu-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-boxes-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-boxes-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-pallets-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-stack-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-container-open-960.jpg</image:loc></image:image>
@@ -3042,7 +3072,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/cases/taiwan-foam-brickroll/" />
     <lastmod>2026-11-12</lastmod>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-warehouse-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-stack-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-stack-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-pallets-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-container-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-seal-960.jpg</image:loc></image:image>
@@ -3054,7 +3084,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/cases/china-shanghai-wall-panel/" />
     <lastmod>2026-11-12</lastmod>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-display-wall-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-display-shelf-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-display-shelf-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-opening-crowd-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-parking-sign-960.jpg</image:loc></image:image>
     <priority>0.8</priority>
@@ -3083,7 +3113,7 @@
     <loc>https://www.qone.kr/costco/countries/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/countries/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-pallet-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/kr-display-3d-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-display-wall-960.jpg</image:loc></image:image>
@@ -3107,9 +3137,9 @@
     <loc>https://www.qone.kr/costco/countries/japan/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/countries/japan/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-cart-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-price-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-cart-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-price-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-box-960.jpg</image:loc></image:image>
     <priority>0.8</priority>
   </url>
@@ -3118,7 +3148,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/countries/china/" />
     <lastmod>2026-11-12</lastmod>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-display-wall-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-display-shelf-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-display-shelf-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-opening-crowd-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/cn-parking-sign-960.jpg</image:loc></image:image>
     <priority>0.8</priority>
@@ -3148,7 +3178,7 @@
     <loc>https://www.qone.kr/costco/categories/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/categories/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-pallet-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-pallet-960.webp</image:loc></image:image>
     <priority>0.9</priority>
   </url>
   <url>
@@ -3206,8 +3236,8 @@
     <loc>https://www.qone.kr/costco/categories/outdoor/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/categories/outdoor/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-cart-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-cart-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-outdoor-960.jpg</image:loc></image:image>
     <priority>0.8</priority>
   </url>
@@ -3245,14 +3275,14 @@
     <loc>https://www.qone.kr/costco/guides/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/guides/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-boxes-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-boxes-960.webp</image:loc></image:image>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.qone.kr/costco/guides/how-to-enter/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/guides/how-to-enter/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-store-entrance-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-store-entrance-960.webp</image:loc></image:image>
     <priority>0.9</priority>
   </url>
   <url>
@@ -3280,7 +3310,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/guides/pallet-display/" />
     <lastmod>2026-11-12</lastmod>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-pallet-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-pallet-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-pallet-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/pk-pallet-render-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-tower-960.jpg</image:loc></image:image>
     <priority>0.8</priority>
@@ -3356,7 +3386,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/guides/label-origin/" />
     <lastmod>2026-11-12</lastmod>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-pallets-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.webp</image:loc></image:image>
     <priority>0.8</priority>
   </url>
   <url>
@@ -3381,14 +3411,14 @@
     <loc>https://www.qone.kr/costco/guides/korea-product-trends/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/guides/korea-product-trends/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.webp</image:loc></image:image>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.qone.kr/costco/guides/season-calendar/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/guides/season-calendar/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.webp</image:loc></image:image>
     <priority>0.8</priority>
   </url>
   <url>
@@ -3415,14 +3445,14 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/guides/pdq-display/" />
     <lastmod>2026-11-12</lastmod>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/pk-pallet-render-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.webp</image:loc></image:image>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.qone.kr/costco/guides/insert-copy/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/guides/insert-copy/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-price-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-price-960.webp</image:loc></image:image>
     <priority>0.8</priority>
   </url>
   <url>
@@ -3432,7 +3462,7 @@
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-indoor-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-outdoor-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-folded-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/mat-made-in-korea-960.webp</image:loc></image:image>
     <priority>0.8</priority>
   </url>
   <url>
@@ -3445,9 +3475,9 @@
     <loc>https://www.qone.kr/costco/guides/japan-export/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/guides/japan-export/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-display-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-store-entrance-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-store-entrance-960.webp</image:loc></image:image>
     <priority>0.8</priority>
   </url>
   <url>
@@ -3477,7 +3507,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/guides/packaging-test/" />
     <lastmod>2026-11-12</lastmod>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/pk-pallet-wrap-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-stack-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-ship-stack-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/au-pallets-960.jpg</image:loc></image:image>
     <priority>0.8</priority>
   </url>
@@ -3491,23 +3521,23 @@
     <loc>https://www.qone.kr/costco/gallery/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/costco/gallery/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-cart-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-pallet-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-price-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-1-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-display-2-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-cart-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-pallet-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-mat-price-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-store-sign-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-store-entrance-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-store-entrance-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-price-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-display-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-box-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-aisle-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/jp-wallpaper-aisle-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-pallet-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-aisle-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-tower-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-neihu-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-shoppers-960.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-boxes-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-store-shoppers-960.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-boxes-960.webp</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-pallets-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-stack-960.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.qone.kr/assets/img/cx/ph/tw-depot-pallet-wrap-960.jpg</image:loc></image:image>
@@ -5623,7 +5653,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/story/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/story/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/ba-after.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/ba-after.webp</image:loc></image:image>
     <priority>0.8</priority>
   </url>
   <url>
@@ -5634,7 +5664,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/story/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/story/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/ba-after.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/ba-after.webp</image:loc></image:image>
     <priority>0.8</priority>
   </url>
   <url>
@@ -5645,7 +5675,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/story/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/story/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/ba-after.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/ba-after.webp</image:loc></image:image>
     <priority>0.8</priority>
   </url>
   <url>
@@ -5656,7 +5686,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/story/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/story/" />
     <lastmod>2026-11-12</lastmod>
-    <image:image><image:loc>https://www.qone.kr/assets/img/ba-after.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.qone.kr/assets/img/ba-after.webp</image:loc></image:image>
     <priority>0.8</priority>
   </url>
   <url>
@@ -5670,7 +5700,10 @@
   <url>
     <loc>https://www.qone.kr/inquiry/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/inquiry/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/inquiry/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/inquiry/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/inquiry/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/inquiry/" />
     <lastmod>2026-11-12</lastmod>
     <priority>0.8</priority>
   </url>
@@ -5692,9 +5725,32 @@
   </url>
   <url>
     <loc>https://www.qone.kr/ja/inquiry/</loc>
-    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/inquiry/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/inquiry/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/inquiry/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/inquiry/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/inquiry/" />
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qone.kr/ko/inquiry/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/inquiry/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/inquiry/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/inquiry/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/inquiry/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/inquiry/" />
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qone.kr/ru/inquiry/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/inquiry/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/inquiry/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/inquiry/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/inquiry/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/inquiry/" />
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>
