@@ -24,6 +24,7 @@ Disallow: /assets/ad/docs/
 User-agent: YandexBot
 Allow: /
 Disallow: /assets/ad/docs/
+Clean-param: product&inquiry
 
 User-agent: YandexAdditional
 Allow: /
@@ -129,3 +130,4 @@ Disallow: /assets/ad/docs/
 
 # AI summary files: /llms.txt and /llms-full.txt
 Sitemap: https://www.qone.kr/sitemap.xml
+Sitemap: https://www.qone.kr/sitemap-index.xml
