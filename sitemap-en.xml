@@ -40,16 +40,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.qone.kr/korea-foam-manufacturer/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/korea-foam-manufacturer/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/pe-foam-oem/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/korea-oem/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/proizvoditel-iz-korei/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/korea-foam-manufacturer/" />
-    <lastmod>2026-11-12</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://www.qone.kr/products/camping/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/products/camping/" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/products/camping/" />
@@ -1241,7 +1231,7 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/company/" />
     <lastmod>2026-11-12</lastmod>
     <priority>0.8</priority>
-  </url>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/company/" /></url>
   <url>
     <loc>https://www.qone.kr/inquiry/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/inquiry/" />
