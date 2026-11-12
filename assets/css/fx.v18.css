@@ -32,7 +32,6 @@
 .fx-ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.5);
   transform:scale(0);animation:fxRipple .6s ease-out forwards;pointer-events:none}
 @keyframes fxRipple{to{transform:scale(3.2);opacity:0}}
-.wa-fab{animation:fxPulse 2.6s ease-in-out infinite}
 @keyframes fxPulse{0%,100%{box-shadow:0 4px 14px rgba(0,0,0,.22),0 0 0 0 rgba(37,211,102,.45)}
   55%{box-shadow:0 4px 14px rgba(0,0,0,.22),0 0 0 14px rgba(37,211,102,0)}}
 
@@ -78,7 +77,7 @@
 @keyframes fxGradShift{to{background-position:100% center}}
 
 @media (prefers-reduced-motion: reduce){
-  .fx-marquee .fx-track,.wa-fab,.hero.fx-hero::before,.hero .grad{animation:none !important}
+  .fx-marquee .fx-track,.hero.fx-hero::before,.hero .grad{animation:none !important}
   .prod-card,.cat-preview-card,.btn{transition:none}
   .step-row .step{opacity:1;transform:none}
 }
