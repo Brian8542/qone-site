@@ -241,11 +241,22 @@
       if (cur < last) { go(cur + 1); return; }
       if (sending) return;
       sending = true; next.disabled = true; status.className = 'fstat'; status.textContent = STR.sending || 'Sending…';
-      var payload = {}; new FormData(form).forEach(function (v, k) { payload[k] = v; });
-      fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) })
+      var payload = {}; new FormData(form).forEach(function (v, k) {
+        if (k === 'access_key' || k === 'botcheck') return;
+        payload[k] = v;
+      });
+      if (payload.subject && !payload._subject) { payload._subject = payload.subject; delete payload.subject; }
+      if (!payload._subject) payload._subject = 'Inquiry from qone.kr';
+      payload._template = 'table';
+      payload._captcha = 'false';
+      fetch('https://formsubmit.co/ajax/chl@qone.kr', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) })
         .then(function (r) { return r.json(); })
         .then(function (res) {
-          if (res && res.success) { status.className = 'fstat ok'; status.textContent = STR.ok || 'Thank you. Your message has been sent.'; form.reset(); setTimeout(function () { go(0); }, 400); }
+          if (res && (res.success === true || res.success === 'true')) {
+            var thanks = form.getAttribute('data-thanks');
+            if (thanks) { location.href = thanks; return; }
+            status.className = 'fstat ok'; status.textContent = STR.ok || 'Thank you. Your message has been sent.'; form.reset(); setTimeout(function () { go(0); }, 400);
+          }
           else { status.className = 'fstat err'; status.textContent = STR.err || 'Something went wrong. Please email chl@qone.kr directly.'; }
         })
         .catch(function () { status.className = 'fstat err'; status.textContent = STR.err || 'Something went wrong. Please email chl@qone.kr directly.'; })
@@ -260,6 +271,16 @@
     if (iq && map[iq] !== undefined) { var r = qa('input[name="inquiry_type"]', form)[map[iq]]; if (r) r.checked = true; }
     if (pr) { var pf = q('#f-product', form); if (pf) pf.value = pr; }
     go(0);
+  }
+
+  /* Dedicated inquiry forms: same FormSubmit destination, prefill the product from ?product= */
+  var bqf = q('#bqf');
+  if (bqf) {
+    var named = params.get('product');
+    if (named) {
+      var det = q('input[name="product details"]', bqf);
+      if (det && !det.value) det.value = named;
+    }
   }
 
   /* ---------- cursor glow (off by default) ---------- */
