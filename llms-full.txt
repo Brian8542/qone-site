@@ -2085,7 +2085,7 @@ OEM·PB 생산
 이메일
 chl@qone.kr
 문의 양식
-www.qone.kr/ko/#contact
+https://www.qone.kr/ko/inquiry/
 주소
 경기도 여주시 연하동로 166 (우 12646)
 

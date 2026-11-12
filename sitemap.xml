@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.qone.kr/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/" />
@@ -2799,46 +2799,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/partner/" />
     <lastmod>2026-11-12</lastmod>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.qone.kr/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/privacy/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/privacy/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/privacy/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/privacy/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/privacy/" />
-    <lastmod>2026-11-12</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.qone.kr/ko/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/privacy/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/privacy/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/privacy/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/privacy/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/privacy/" />
-    <lastmod>2026-11-12</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.qone.kr/ja/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/privacy/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/privacy/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/privacy/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/privacy/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/privacy/" />
-    <lastmod>2026-11-12</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.qone.kr/ru/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.qone.kr/privacy/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.qone.kr/ko/privacy/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.qone.kr/ja/privacy/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.qone.kr/ru/privacy/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.qone.kr/privacy/" />
-    <lastmod>2026-11-12</lastmod>
-    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.qone.kr/costco/</loc>
