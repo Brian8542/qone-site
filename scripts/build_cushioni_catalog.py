@@ -142,7 +142,7 @@ CATS = [
 UI = {
     "en": {
         "brand": "CUSHIONI", "sub": "Factory catalog", "lang": "en", "html": "en",
-        "nav_cat": "Catalog", "nav_req": "Request a quote", "home": "CUSHIONI",
+        "nav_cat": "Catalog", "nav_req": "Request a quote", "home": "CUSHIONI", "site_home": "Home",
         "h1": "CUSHIONI factory catalog",
         "lead": "QONE’s CUSHIONI factory line for overseas wholesale buyers: peel-and-stick wall panels, wallpaper, and foam mats. Search by name or filter by category, then send a quote request to chl@qone.kr.",
         "search": "Search products", "ph": "Try wallpaper, foam block, camping mat",
@@ -177,7 +177,7 @@ UI = {
     },
     "ko": {
         "brand": "CUSHIONI", "sub": "공장 카탈로그", "lang": "ko", "html": "ko",
-        "nav_cat": "카탈로그", "nav_req": "견적 요청", "home": "쿠셔니",
+        "nav_cat": "카탈로그", "nav_req": "견적 요청", "home": "쿠셔니", "site_home": "홈",
         "h1": "쿠셔니 공장 카탈로그",
         "lead": "여주 공장의 쿠셔니 벽패널, 단열벽지, 폼 매트를 해외 바이어용으로 정리했습니다. 이름이나 카테고리로 찾고, 견적은 chl@qone.kr 로 요청해 주세요.",
         "search": "제품 검색", "ph": "벽지, 폼블럭, 캠핑매트",
@@ -212,7 +212,7 @@ UI = {
     },
     "ja": {
         "brand": "CUSHIONI", "sub": "工場カタログ", "lang": "ja", "html": "ja",
-        "nav_cat": "カタログ", "nav_req": "見積依頼", "home": "クシオニ",
+        "nav_cat": "カタログ", "nav_req": "見積依頼", "home": "クシオニ", "site_home": "ホーム",
         "h1": "クシオニ工場カタログ",
         "lead": "驪州工場のCUSHIONI壁パネル、断熱壁紙、フォームマットです。名前やカテゴリで絞り、見積は chl@qone.kr へ依頼してください。",
         "search": "製品を検索", "ph": "壁紙、フォームブロック、キャンプマット",
@@ -247,7 +247,7 @@ UI = {
     },
     "es": {
         "brand": "CUSHIONI", "sub": "Catálogo de fábrica", "lang": "es", "html": "es",
-        "nav_cat": "Catálogo", "nav_req": "Pedir cotización", "home": "CUSHIONI",
+        "nav_cat": "Catálogo", "nav_req": "Pedir cotización", "home": "CUSHIONI", "site_home": "Inicio",
         "h1": "Catálogo de fábrica CUSHIONI",
         "lead": "Línea de fábrica CUSHIONI de QONE para compradores mayoristas: paneles de pared, papel pintado y esterillas de espuma. Busque por nombre o categoría y pida cotización a chl@qone.kr.",
         "search": "Buscar productos", "ph": "papel pintado, panel, esterilla",
@@ -1113,20 +1113,23 @@ def canon_lang(url):
     return "en"
 
 
+MAIN_HOME = {"en": "/", "ko": "/ko/", "ja": "/ja/", "es": "/"}
+
+
 def header(lang, current):
     u = UI[lang]
     b = base_of(lang)
+    site = MAIN_HOME[lang]
     def a(key, href, label):
         cur = ' aria-current="page"' if current == key else ""
         return f'<a href="{href}"{cur}>{label}</a>'
-    langs = []
-    # language switcher keeps the same leaf; caller passes via current page builders
+    home = a("site", site, esc(u["site_home"]))
     return f"""<a class="skip" href="#main">Skip to content</a><header class="yh"><div class="yh-in">
-  <a class="brand" href="{b}"><span class="bq">QONE</span><span class="bt">{esc(u['sub'])}</span></a>
-  <nav class="yn" aria-label="CUSHIONI">{a('cat', b+'catalog/', esc(u['nav_cat']))}{a('req', b+'request/', esc(u['nav_req']))}</nav>
+  <a class="brand" href="{site}"><span class="bq">QONE</span><span class="bt">{esc(u['sub'])}</span></a>
+  <nav class="yn" aria-label="CUSHIONI">{home}{a('cat', b+'catalog/', esc(u['nav_cat']))}{a('req', b+'request/', esc(u['nav_req']))}</nav>
   {{LANGS}}
   <button class="lbtn" type="button" data-open-list aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="lbt">{esc(u['list'])}</span><b class="lcount" aria-live="polite">0</b></button>
-</div><nav class="mnav" aria-label="Menu">{a('home', b, esc(u['home']))}{a('cat', b+'catalog/', esc(u['nav_cat']))}{a('req', b+'request/', esc(u['nav_req']))}</nav></header>"""
+</div><nav class="mnav" aria-label="Menu">{home}{a('home', b, esc(u['home']))}{a('cat', b+'catalog/', esc(u['nav_cat']))}{a('req', b+'request/', esc(u['nav_req']))}</nav></header>"""
 
 
 def lang_switch(leaf):
@@ -1160,8 +1163,9 @@ def footer(lang, products):
         for slug, label in CATS
         if any(p["cat"] == slug for p in products)
     )
+    site = MAIN_HOME[lang]
     return f"""<footer class="yf"><div class="wrap">
-  <div class="yf-top"><a class="brand inv" href="{b}"><span class="bq">QONE</span><span class="bt">{esc(u['sub'])}</span></a>
+  <div class="yf-top"><a class="brand inv" href="{site}"><span class="bq">QONE</span><span class="bt">{esc(u['sub'])}</span></a>
     <p>{esc(u['foot'])}</p><a class="yf-mail" href="mailto:chl@qone.kr">{MAIL}chl@qone.kr</a></div>
   <nav class="yf-cats" aria-label="{esc(u['nav_cat'])}">{cats}</nav>
   <div class="yf-links"><a href="{b}catalog/">{esc(u['nav_cat'])}</a><a href="{b}request/">{esc(u['nav_req'])}</a><a href="/">{'QONE'}</a><a href="/inquiry/">Inquiry</a><a href="/privacy/">Privacy</a></div>
