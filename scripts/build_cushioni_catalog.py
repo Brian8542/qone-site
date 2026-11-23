@@ -42,6 +42,14 @@ REMOVED_STORE_IDS = {
     "13622474747", "13622474748", "13622474749", "13622474750",
     "13622474751", "13622474752", "13622474753", "13622474754",
     "13622474755", "13622474756", "13622474757", "13622474758",
+    # No owner photo; removed before launch.
+    "10834190577",  # C-0042 pastel yellow brick
+    "10892990848",  # C-0055 silver gray stone
+    "10248792580",  # C-0057 stone panel
+    "10892994007",  # C-0063 stone beige
+    "10892981626",  # C-0075 white stone
+    "4625767527",   # C-0089 silk roll 50 cm × 30 m
+    "10512486547",  # C-0091 all-purpose wallpaper
 }
 
 # Owner-supplied photos (web/*.jpg). Color chips around 210 px stay at native size.
