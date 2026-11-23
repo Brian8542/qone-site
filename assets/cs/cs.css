@@ -1,0 +1,15 @@
+/* CUSHIONI catalog additions on top of the Yiwu catalog styles */
+.md-d{margin:14px 0 0;color:var(--ink2);font-size:15.5px}
+.md-more{margin-top:12px}
+.pc-ko{display:block;color:var(--ink3);font-size:12.5px;line-height:1.35;margin-top:2px}
+.pd{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px;align-items:start;padding:28px 0 64px}
+.pd-ph{background:var(--peg);border-radius:18px;padding:18px}
+.pd-ph img{margin:0 auto;background:#fff;border-radius:12px}
+.pd h1{font-size:clamp(32px,4vw,52px)}
+.pd .ko{margin-top:8px;color:var(--ink3);font-weight:650}
+.pd .lead{margin-top:16px}
+.pd dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:22px 0}
+.pd dt{color:var(--ink3);font-weight:650}
+.pd dd{margin:0}
+.note{margin-top:18px;color:var(--ink3);font-size:14.5px}
+@media(max-width:800px){.pd{grid-template-columns:1fr;gap:18px;padding-top:12px}}
