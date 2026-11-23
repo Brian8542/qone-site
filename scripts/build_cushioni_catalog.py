@@ -18,6 +18,32 @@ IMG_L = ROOT / "assets/cs/img/l"
 IMG_T = ROOT / "assets/cs/img/t"
 UA = "Mozilla/5.0 (compatible; QONE-catalog/1.0)"
 
+# Owner decision: these store listings are not QONE foam goods and stay out of the catalog.
+REMOVED_STORE_IDS = {
+    "5938619367",   # Hanil electric blanket
+    "6332551319",   # freezer rice containers
+    "10566599095",  # vitamin shower filter
+    "9129084938",   # mini travel shower filter set
+    "9128994727",   # travel shower head with filter
+    "9128944501",   # vitamin shower filter, 3 types
+    "9128926379",   # moisturizing vitamin shower filter
+    "10007094888",  # grain canisters, 5+5
+    "7453257784",   # grain canisters, 5 pieces
+    "10389507173",  # bamboo mat
+    "6726150133",   # bamboo body pillow
+    "11858926120",  # folding walking aid
+    "6724285602",   # camping chair
+    "6724203719",   # 50 L storage box
+    "6724325699",   # ethnic knee blanket
+    "13626258374",  # acoustic art board
+    "6715842525",   # carpet tile
+    "11609767285",  # carpet tile
+    "12628219607",  # terrazzo floor tile
+    "13622474747", "13622474748", "13622474749", "13622474750",
+    "13622474751", "13622474752", "13622474753", "13622474754",
+    "13622474755", "13622474756", "13622474757", "13622474758",
+}
+
 EXTRA = [
     {"id": "10512486547", "name_ko": "쿠셔니 70cm x 2.5m 만능벽지 셀프도배 스티커접착식 폼벽지", "images": [], "blurb_ko": "기존 벽지 위에 붙이는 셀프도배용 실크 단열벽지입니다.", "src": "silk"},
     {"id": "10032351303", "name_ko": "쿠셔니 붙이는벽지 실크 단열 스티커 결로방지 셀프도배 폭 50cm 2.5m, 바이올렛", "images": [], "blurb_ko": "기존 벽지 위에 붙이면 도배가 끝나는 셀프 도배용 실크벽지입니다.", "src": "silk"},
@@ -99,7 +125,7 @@ UI = {
         "brand": "CUSHIONI", "sub": "Factory catalog", "lang": "en", "html": "en",
         "nav_cat": "Catalog", "nav_req": "Request a quote", "home": "CUSHIONI",
         "h1": "CUSHIONI factory catalog",
-        "lead": "Every product listed on QONE’s own CUSHIONI store, made for overseas wholesale buyers. Search by name or filter by category, then send a quote request to chl@qone.kr.",
+        "lead": "QONE’s CUSHIONI factory line for overseas wholesale buyers: peel-and-stick wall panels, wallpaper, and foam mats. Search by name or filter by category, then send a quote request to chl@qone.kr.",
         "search": "Search products", "ph": "Try wallpaper, foam block, camping mat",
         "showing": "{n} of {t} products", "all": "All",
         "add": "Add to quote list", "added": "In your quote list", "remove": "Remove",
@@ -134,7 +160,7 @@ UI = {
         "brand": "CUSHIONI", "sub": "공장 카탈로그", "lang": "ko", "html": "ko",
         "nav_cat": "카탈로그", "nav_req": "견적 요청", "home": "쿠셔니",
         "h1": "쿠셔니 공장 카탈로그",
-        "lead": "큐원 스마트스토어에 올라 있는 쿠셔니 제품을 해외 바이어용으로 정리했습니다. 이름이나 카테고리로 찾고, 견적은 chl@qone.kr 로 요청해 주세요.",
+        "lead": "여주 공장의 쿠셔니 벽패널, 단열벽지, 폼 매트를 해외 바이어용으로 정리했습니다. 이름이나 카테고리로 찾고, 견적은 chl@qone.kr 로 요청해 주세요.",
         "search": "제품 검색", "ph": "벽지, 폼블럭, 캠핑매트",
         "showing": "{t}종 중 {n}종", "all": "전체",
         "add": "견적 리스트에 담기", "added": "견적 리스트에 담김", "remove": "빼기",
@@ -169,7 +195,7 @@ UI = {
         "brand": "CUSHIONI", "sub": "工場カタログ", "lang": "ja", "html": "ja",
         "nav_cat": "カタログ", "nav_req": "見積依頼", "home": "クシオニ",
         "h1": "クシオニ工場カタログ",
-        "lead": "QONE自身のCUSHIONIストアに掲載されている製品です。名前やカテゴリで絞り、見積は chl@qone.kr へ依頼してください。",
+        "lead": "驪州工場のCUSHIONI壁パネル、断熱壁紙、フォームマットです。名前やカテゴリで絞り、見積は chl@qone.kr へ依頼してください。",
         "search": "製品を検索", "ph": "壁紙、フォームブロック、キャンプマット",
         "showing": "{t}点中 {n}点", "all": "すべて",
         "add": "見積リストに追加", "added": "見積リストに追加済み", "remove": "外す",
@@ -204,7 +230,7 @@ UI = {
         "brand": "CUSHIONI", "sub": "Catálogo de fábrica", "lang": "es", "html": "es",
         "nav_cat": "Catálogo", "nav_req": "Pedir cotización", "home": "CUSHIONI",
         "h1": "Catálogo de fábrica CUSHIONI",
-        "lead": "Todos los productos publicados en la tienda CUSHIONI de QONE, preparados para compradores mayoristas. Busque por nombre o categoría y pida cotización a chl@qone.kr.",
+        "lead": "Línea de fábrica CUSHIONI de QONE para compradores mayoristas: paneles de pared, papel pintado y esterillas de espuma. Busque por nombre o categoría y pida cotización a chl@qone.kr.",
         "search": "Buscar productos", "ph": "papel pintado, panel, esterilla",
         "showing": "{n} de {t} productos", "all": "Todos",
         "add": "Añadir a la lista", "added": "En su lista", "remove": "Quitar",
@@ -765,6 +791,9 @@ def load_products():
                 cur["images"] = images
             if len(blurb) > len(cur["blurb_ko"]):
                 cur["blurb_ko"] = blurb
+    for sid in list(by):
+        if str(sid) in REMOVED_STORE_IDS:
+            del by[sid]
     products = []
     for raw in by.values():
         fam = family_of(raw["name_ko"])
@@ -1055,7 +1084,11 @@ def with_current_lang(block, lang, leaf):
 def footer(lang, products):
     u = UI[lang]
     b = base_of(lang)
-    cats = "".join(f'<a href="{b}c/{slug}/">{esc(label[lang])}</a>' for slug, label in CATS)
+    cats = "".join(
+        f'<a href="{b}c/{slug}/">{esc(label[lang])}</a>'
+        for slug, label in CATS
+        if any(p["cat"] == slug for p in products)
+    )
     return f"""<footer class="yf"><div class="wrap">
   <div class="yf-top"><a class="brand inv" href="{b}"><span class="bq">QONE</span><span class="bt">{esc(u['sub'])}</span></a>
     <p>{esc(u['foot'])}</p><a class="yf-mail" href="mailto:chl@qone.kr">{MAIL}chl@qone.kr</a></div>
@@ -1094,7 +1127,8 @@ def modal(lang):
 
 def yw_boot(lang, products=None):
     u = UI[lang]
-    cats = {slug: label[lang] for slug, label in CATS}
+    live = {p["cat"] for p in products} if products else set()
+    cats = {slug: label[lang] for slug, label in CATS if slug in live}
     csi = {}
     if products:
         for p in products:
@@ -1205,6 +1239,8 @@ def build_catalog(products, lang, only=None):
         crumb = f'<nav class="cr" aria-label="Breadcrumb"><ol><li><a href="{base_of(lang)}">{esc(u["crumb_home"])}</a></li><li aria-current="page">{esc(u["nav_cat"])}</li></ol></nav>'
         chips = '<div class="chips" role="group" aria-label="Category">' + f'<button type="button" class="chip" data-cat="" aria-pressed="true">{esc(u["all"])} <span>{len(products)}</span></button>'
         for slug, lab in CATS:
+            if not counts[slug]:
+                continue
             chips += f'<button type="button" class="chip" data-cat="{slug}" aria-pressed="false">{esc(lab[lang])} <span>{counts[slug]}</span></button>'
         chips += "</div>"
         current = "cat"
@@ -1297,6 +1333,8 @@ def build_landing(products, lang):
     counts = {slug: sum(1 for p in products if p["cat"] == slug) for slug, _ in CATS}
     bays = []
     for slug, lab in CATS:
+        if not counts[slug]:
+            continue
         sample = next(p for p in products if p["cat"] == slug and p["images"])
         bays.append(
             f'<li class="bay"><a href="{b}c/{slug}/"><span class="bay-w"><span><picture><source type="image/webp" srcset="/assets/cs/img/t/{sample["ph"]}.webp"><img src="/assets/cs/img/t/{sample["ph"]}.jpg" alt="{esc(alt_of(sample, lang))}" width="180" height="180"></picture></span></span>'
@@ -1365,11 +1403,11 @@ def patch_nav(n_wall, n_living, n_camp):
         ),
         ROOT / "products/home-living/index.html": (
             '<p class="cat-count">8 products</p>',
-            '<p class="cat-count">8 products</p>\n    <p class="sec-sub"><a href="/cushioni/c/living/">Full CUSHIONI living catalog</a> — herringbone mats, play mats, carpet tile and deco tile. <a href="/cushioni/request/">Request a quote</a> or email chl@qone.kr.</p>',
+            '<p class="cat-count">8 products</p>\n    <p class="sec-sub"><a href="/cushioni/c/living/">Full CUSHIONI living catalog</a> — herringbone mats and kids’ play mats from the Yeoju factory. <a href="/cushioni/request/">Request a quote</a> or email chl@qone.kr.</p>',
         ),
         ROOT / "products/camping/index.html": (
             '<p class="cat-count">9 products</p>',
-            '<p class="cat-count">9 products</p>\n    <p class="sec-sub"><a href="/cushioni/c/camping/">Full CUSHIONI camping catalog</a> — folding mats and the rest of the camping line. <a href="/cushioni/request/">Request a quote</a> or email chl@qone.kr.</p>',
+            '<p class="cat-count">9 products</p>\n    <p class="sec-sub"><a href="/cushioni/c/camping/">Full CUSHIONI camping catalog</a> — folding PE foam mats from the Yeoju factory. <a href="/cushioni/request/">Request a quote</a> or email chl@qone.kr.</p>',
         ),
         ROOT / "ko/products/wall-decor/index.html": (
             '<p class="cat-count">25 개 제품</p>',
@@ -1463,8 +1501,9 @@ def patch_sitemaps(products):
         if extra:
             text = text.replace("</urlset>", "".join(extra) + "</urlset>")
             path.write_text(text, encoding="utf-8")
+    live_cats = [s for s, _ in CATS if any(p["cat"] == s for p in products)]
     en, ko, ja, es = [], [], [], []
-    leaves = ["", "catalog/", "request/", "thanks/"] + [f"c/{s}/" for s, _ in CATS] + [f"p/{p['ph']}/" for p in products]
+    leaves = ["", "catalog/", "request/", "thanks/"] + [f"c/{s}/" for s in live_cats] + [f"p/{p['ph']}/" for p in products]
     for leaf in leaves:
         en.append(absu("/cushioni/" + leaf))
         ko.append(absu("/cushioni/ko/" + leaf))
@@ -1474,34 +1513,63 @@ def patch_sitemaps(products):
     add(ROOT / "sitemap-ko.xml", ko)
     add(ROOT / "sitemap-ja.xml", ja)
     add(ROOT / "sitemap-es.xml", es)
-    # image sitemap: catalog + first product images
-    img_urls = []
-    block = ["<url><loc>https://www.qone.kr/cushioni/catalog/</loc>"]
+    keep = {p["ph"] for p in products}
+    url_re = re.compile(r"<url><loc>([^<]+)</loc></url>")
+    for path in (ROOT / "sitemap-en.xml", ROOT / "sitemap-ko.xml", ROOT / "sitemap-ja.xml", ROOT / "sitemap-es.xml"):
+        text = path.read_text(encoding="utf-8")
+
+        def repl(m):
+            loc = m.group(1)
+            if "/cushioni/" not in loc:
+                return m.group(0)
+            prod = re.search(r"/p/(c-\d+)/", loc)
+            if prod and prod.group(1) not in keep:
+                return ""
+            cat = re.search(r"/c/([a-z-]+)/", loc)
+            if cat and cat.group(1) not in live_cats:
+                return ""
+            return m.group(0)
+
+        path.write_text(url_re.sub(repl, text), encoding="utf-8")
+    imgs = []
     for p in products:
         if not p["images"]:
             continue
-        block.append(f"<image:image><image:loc>https://www.qone.kr/assets/cs/img/l/{p['ph']}.webp</image:loc><image:title>{esc(title_of(p,'en'))}</image:title></image:image>")
-    block.append("</url>")
+        imgs.append(
+            f"<image:image><image:loc>https://www.qone.kr/assets/cs/img/l/{p['ph']}.webp</image:loc>"
+            f"<image:title>{esc(title_of(p, 'en'))}</image:title></image:image>"
+        )
+    block = "<url><loc>https://www.qone.kr/cushioni/catalog/</loc>" + "".join(imgs) + "</url>"
     path = ROOT / "sitemap-images.xml"
     text = path.read_text(encoding="utf-8")
-    if "cushioni/catalog" not in text:
-        path.write_text(text.replace("</urlset>", "".join(block) + "</urlset>"), encoding="utf-8")
+    text2, n = re.subn(r"<url><loc>https://www\.qone\.kr/cushioni/catalog/</loc>.*?</url>", block, text, count=1)
+    if n == 0:
+        text2 = text.replace("</urlset>", block + "</urlset>")
+    path.write_text(text2, encoding="utf-8")
 
 
 def patch_llms(products):
     path = ROOT / "llms.txt"
     text = path.read_text(encoding="utf-8")
-    if "/cushioni/catalog/" in text:
-        return
     counts = {slug: sum(1 for p in products if p["cat"] == slug) for slug, _ in CATS}
+    live = [(slug, n) for slug, n in counts.items() if n]
+    names = {"wall-decor": "wall decor", "living": "living", "camping": "camping", "household": "household"}
+    count_line = ", ".join(f"{names[s]} {n}" for s, n in live) + f". Total {len(products)}."
+    link_line = " · ".join(
+        f"{names[s].title() if s != 'wall-decor' else 'Wall decor'} https://www.qone.kr/cushioni/c/{s}/" for s, _ in live
+    )
     block = f"""
 
 ## CUSHIONI factory catalog
-- Public wholesale catalog of the products listed on QONE's own CUSHIONI SmartStore. English copy, Korean names kept. No prices are published; buyers request a quote at chl@qone.kr or https://www.qone.kr/cushioni/request/ .
+- Wholesale catalog of QONE's CUSHIONI factory line (peel-and-stick wall panels, wallpaper, and foam mats). English copy, Korean names kept. No prices are published; buyers request a quote at chl@qone.kr or https://www.qone.kr/cushioni/request/ .
 - Catalog: https://www.qone.kr/cushioni/catalog/ · Korean https://www.qone.kr/cushioni/ko/catalog/ · Japanese https://www.qone.kr/cushioni/ja/catalog/ · Spanish https://www.qone.kr/cushioni/es/catalog/
-- Counts: wall decor {counts['wall-decor']}, living {counts['living']}, camping {counts['camping']}, household {counts['household']}. Total {len(products)}.
-- Wall decor https://www.qone.kr/cushioni/c/wall-decor/ · Living https://www.qone.kr/cushioni/c/living/ · Camping https://www.qone.kr/cushioni/c/camping/ · Household https://www.qone.kr/cushioni/c/household/
+- Counts: {count_line}
+- {link_line}
 """
+    if "/cushioni/catalog/" in text:
+        text = re.sub(r"\n## CUSHIONI factory catalog\n(?:- .*\n){1,6}", block, text, count=1)
+        path.write_text(text, encoding="utf-8")
+        return
     path.write_text(text.rstrip() + block, encoding="utf-8")
 
 
@@ -1524,6 +1592,57 @@ def audit(products):
     return bad
 
 
+def write_photo_map(products):
+    import csv
+    path = ROOT / "cushioni" / "photos-needed.csv"
+    rows = [p for p in products if p.get("fallback")]
+    rows.sort(key=lambda p: p["cid"])
+    with path.open("w", encoding="utf-8-sig", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["product_id", "store_id", "name_ko", "name_en", "current_image"])
+        for p in rows:
+            w.writerow([
+                p["cid"],
+                p["store_id"],
+                p["name_ko"],
+                title_of(p, "en"),
+                f"/assets/cs/img/l/{p['ph']}.webp",
+            ])
+    print("photo map", path, len(rows))
+
+
+def remove_dropped(products):
+    keep = {p["ph"] for p in products}
+    live_cats = {p["cat"] for p in products}
+    for lang in ("", "ko/", "ja/", "es/"):
+        root = ROOT / "cushioni" / lang
+        pdir = root / "p"
+        if pdir.exists():
+            for d in pdir.iterdir():
+                if d.is_dir() and d.name not in keep:
+                    for child in d.iterdir():
+                        child.unlink()
+                    d.rmdir()
+        cdir = root / "c"
+        if cdir.exists():
+            for d in cdir.iterdir():
+                if d.is_dir() and d.name not in live_cats:
+                    for child in d.iterdir():
+                        child.unlink()
+                    d.rmdir()
+    for folder in (IMG_L, IMG_T):
+        if not folder.exists():
+            continue
+        for f in folder.iterdir():
+            if f.stem not in keep and f.suffix in {".webp", ".jpg", ".jpeg"}:
+                f.unlink()
+    sources_path = ROOT / "cushioni" / "image-sources.json"
+    if sources_path.exists():
+        sources = json.loads(sources_path.read_text(encoding="utf-8"))
+        sources = {k: v for k, v in sources.items() if k in keep}
+        sources_path.write_text(json.dumps(sources, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def main():
     products = load_products()
     print("products", len(products))
@@ -1531,10 +1650,7 @@ def main():
         print(slug, sum(1 for p in products if p["cat"] == slug))
     missing = download_images(products)
     print("missing images", len(missing))
-    # drop products that still have no image file? Keep them only if image exists.
     products = [p for p in products if (IMG_T / f"{p['ph']}.jpg").exists()]
-    # reassign ids so the sequence stays dense after drops? Keep original ids already assigned before filter.
-    # If some dropped, ids have gaps. That's ok if we assigned before download. Products without images were given fallback or dropped.
     print("with images", len(products))
     data = []
     for p in products:
@@ -1561,7 +1677,8 @@ def main():
         build_landing(products, lang)
         build_catalog(products, lang, only=None)
         for slug, _ in CATS:
-            build_catalog(products, lang, only=slug)
+            if any(p["cat"] == slug for p in products):
+                build_catalog(products, lang, only=slug)
         build_request(lang, products)
         build_thanks(lang, products)
         for p in products:
@@ -1569,8 +1686,10 @@ def main():
         print("built", lang)
     counts = {slug: sum(1 for p in products if p["cat"] == slug) for slug, _ in CATS}
     patch_nav(counts["wall-decor"], counts["living"], counts["camping"])
+    remove_dropped(products)
     patch_sitemaps(products)
     patch_llms(products)
+    write_photo_map(products)
     bad = audit(products)
     print("audit", bad[:12], "count", len(bad))
     report = {
@@ -1579,7 +1698,6 @@ def main():
         "line_photos": sum(1 for p in products if p.get("fallback")),
         "missing_images_dropped_or_failed": missing,
     }
-    write(ROOT / "cushioni" / "build-report.json", json.dumps(report, ensure_ascii=False, indent=2))
     print(json.dumps(report, ensure_ascii=False)[:2000])
 
 
