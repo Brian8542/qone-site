@@ -246,6 +246,7 @@ FAM_COPY = {
         "title": {"en": "Peel-and-stick silk wallpaper", "ko": "붙이는 실크 단열벽지", "ja": "貼るシルク断熱壁紙", "es": "Papel pintado seda autoadhesivo"},
         "mat": "PE foam sheet, printed face, adhesive and release film",
         "origin": "QONE Yeoju factory, Korea",
+        "factory": True,
         "cat": "wall-decor",
     },
     "foam": {
@@ -256,6 +257,7 @@ FAM_COPY = {
         "title": {"en": "3D foam wall panel", "ko": "3D 폼블럭 벽패널", "ja": "3Dフォーム壁パネル", "es": "Panel de pared 3D de espuma"},
         "mat": "PE foam, self-adhesive backing",
         "origin": "QONE Yeoju factory, Korea",
+        "factory": True,
         "cat": "wall-decor",
     },
     "acoustic": {
@@ -276,6 +278,7 @@ FAM_COPY = {
         "title": {"en": "Folding camping mat", "ko": "접이식 캠핑매트", "ja": "折りたたみキャンプマット", "es": "Esterilla de camping plegable"},
         "mat": "Closed-cell PE foam",
         "origin": "QONE Yeoju factory, Korea",
+        "factory": True,
         "cat": "camping",
     },
     "camp-chair": {
@@ -326,6 +329,7 @@ FAM_COPY = {
         "title": {"en": "Non-slip herringbone living mat", "ko": "논슬립 헤링본 거실매트", "ja": "滑り止めヘリンボーンマット", "es": "Esterilla de living en espiga"},
         "mat": "PE foam",
         "origin": "QONE Yeoju factory, Korea",
+        "factory": True,
         "cat": "living",
     },
     "kids": {
@@ -336,10 +340,11 @@ FAM_COPY = {
         "title": {"en": "Non-slip kids’ play mat", "ko": "논슬립 유아 놀이매트", "ja": "滑り止めキッズプレイマット", "es": "Esterilla infantil antideslizante"},
         "mat": "PE foam",
         "origin": "QONE Yeoju factory, Korea",
+        "factory": True,
         "cat": "living",
     },
     "tile-carpet": {
-        "en": "Self-install carpet tile, 50 × 50 cm, sold in a 20-piece pack for living rooms and floors. A CUSHIONI floor finish from QONE.",
+        "en": "Carpet tile, 50 × 50 cm, sold in a 20-piece pack on the CUSHIONI store for living-room floors. The listing does not describe it as a PE foam panel from the Yeoju factory.",
         "ko": "50 × 50 cm 타일카페트 20매입입니다. 거실 바닥을 스스로 깔 수 있는 쿠셔니 바닥재입니다.",
         "ja": "50×50cmのタイルカーペット20枚入りです。自分で敷けるクシオニの床材です。",
         "es": "Loseta de moqueta de 50 × 50 cm, pack de 20, para salón y suelos. Acabado de suelo CUSHIONI.",
@@ -349,7 +354,7 @@ FAM_COPY = {
         "cat": "living",
     },
     "deco": {
-        "en": "Peel-and-stick deco floor tile sheet, 600 × 300 mm, for a self-install floor. Pattern and pack size are in the product name. A CUSHIONI floor finish from QONE.",
+        "en": "Peel-and-stick deco floor sheet, 600 × 300 mm, listed on the CUSHIONI store. Pattern and pack size are in the product name. The listing does not describe it as a PE foam panel from the Yeoju factory.",
         "ko": "600 × 300 mm 점착식 데코타일 시트입니다. 패턴과 매수는 제품명에 있습니다. 쿠셔니 바닥재입니다.",
         "ja": "600×300mmの貼るデコタイルシートです。柄と入数は製品名にあります。クシオニの床材です。",
         "es": "Lámina de baldosa deco autoadhesiva de 600 × 300 mm. El dibujo y el número de piezas van en el nombre. Acabado de suelo CUSHIONI.",
@@ -359,7 +364,7 @@ FAM_COPY = {
         "cat": "living",
     },
     "terrazzo": {
-        "en": "Terrazzo puzzle floor tile sold as a 7-piece box for a self-install living-room floor. A CUSHIONI floor finish from QONE.",
+        "en": "Terrazzo puzzle floor tile, sold as a 7-piece box on the CUSHIONI store. The listing does not describe it as a PE foam panel from the Yeoju factory.",
         "ko": "테라조 패턴 퍼즐 바닥타일 1박스 7매입니다. 거실에 스스로 깔 수 있는 쿠셔니 바닥재입니다.",
         "ja": "テラゾー柄のパズル床タイル、1箱7枚です。自分で敷けるクシオニの床材です。",
         "es": "Baldosa puzzle de terrazo, caja de 7 piezas, para un suelo de salón que se instala uno mismo.",
@@ -524,13 +529,13 @@ def size_of(name):
         if c:
             s += f" × {c} {(uc or ub).lower()}"
         return s + thick
-    m2 = re.search(r"폭\s*(\d+(?:\.\d+)?)\s*cm\s*(\d+(?:\.\d+)?)\s*m", n, re.I)
+    m2 = re.search(r"(?:폭\s*)?(\d+(?:\.\d+)?)\s*cm\s+(\d+(?:\.\d+)?)\s*m", n, re.I)
     if m2:
         return f"{m2.group(1)} cm × {m2.group(2)} m" + thick
     m3 = re.search(r"(\d+(?:\.\d+)?)\s*리터", name)
     if m3:
         return m3.group(1) + " L"
-    m4 = re.search(r"(\d+)\s*L\b", name)
+    m4 = re.search(r"(?<![\d.])(\d+(?:\.\d+)?)\s*L\b", name)
     if m4:
         return m4.group(1) + " L"
     return thick.lstrip(", ")
@@ -570,6 +575,8 @@ def pattern_of(name, lang):
     }
     hits = []
     for ko, label in pairs[lang]:
+        if ko == "샌드" and "체크샌드" not in name and "샌드 폼" not in name and "샌드폼" not in name:
+            continue
         if ko in name and label not in hits:
             hits.append(label)
     return ", ".join(hits[:3])
@@ -583,23 +590,162 @@ def line_key(name):
     return fam
 
 
+FOAM_KIND = {
+    "en": [
+        ("러시안", "Russian stacked-stone foam panel"),
+        ("대리석", "Marble foam wall panel"),
+        ("체크샌드", "Check-sand foam wall panel"),
+        ("샌드", "Check-sand foam wall panel"),
+        ("우드", "Wood-grain foam wall panel"),
+        ("모노", "Mono foam wall panel"),
+        ("파벽돌", "Brick foam wall panel"),
+        ("벽돌", "Brick foam wall panel"),
+        ("스톤", "Stone foam wall panel"),
+    ],
+    "ko": [
+        ("러시안", "러시안 단층석 폼블럭"),
+        ("대리석", "대리석 폼블럭"),
+        ("체크샌드", "체크샌드 폼블럭"),
+        ("샌드", "체크샌드 폼블럭"),
+        ("우드", "우드 폼블럭"),
+        ("모노", "모노 폼블럭"),
+        ("파벽돌", "파벽돌 폼블럭"),
+        ("벽돌", "벽돌 폼블럭"),
+        ("스톤", "스톤 폼블럭"),
+    ],
+    "ja": [
+        ("러시안", "ロシアンストーン壁パネル"),
+        ("대리석", "大理石フォームパネル"),
+        ("체크샌드", "チェックサンド壁パネル"),
+        ("샌드", "チェックサンド壁パネル"),
+        ("우드", "木目フォームパネル"),
+        ("모노", "モノフォームパネル"),
+        ("파벽돌", "レンガフォームパネル"),
+        ("벽돌", "レンガフォームパネル"),
+        ("스톤", "ストーンフォームパネル"),
+    ],
+    "es": [
+        ("러시안", "Panel de piedra rusa"),
+        ("대리석", "Panel de mármol"),
+        ("체크샌드", "Panel arena a cuadros"),
+        ("샌드", "Panel arena a cuadros"),
+        ("우드", "Panel veta de madera"),
+        ("모노", "Panel mono"),
+        ("파벽돌", "Panel ladrillo"),
+        ("벽돌", "Panel ladrillo"),
+        ("스톤", "Panel de piedra"),
+    ],
+}
+EXTRA_BITS = {
+    "en": {"v2": "v2", "roll": "roll", "set12": "12-sheet set", "sheet1": "1 sheet", "colors9": "9 colors", "accent": "accent wall"},
+    "ko": {"v2": "v2", "roll": "롤", "set12": "12장 세트", "sheet1": "1장", "colors9": "9컬러", "accent": "포인트"},
+    "ja": {"v2": "v2", "roll": "ロール", "set12": "12枚セット", "sheet1": "1枚", "colors9": "9色", "accent": "アクセント"},
+    "es": {"v2": "v2", "roll": "rollo", "set12": "juego de 12", "sheet1": "1 pieza", "colors9": "9 colores", "accent": "acento"},
+}
+
+
+def _bits(name, lang):
+    b = EXTRA_BITS[lang]
+    out = []
+    if re.search(r"v2", name, re.I):
+        out.append(b["v2"])
+    if "롤" in name:
+        out.append(b["roll"])
+    if "12장" in name:
+        out.append(b["set12"])
+    elif re.search(r"(?<!\d)1장", name):
+        out.append(b["sheet1"])
+    if "9컬러" in name or "9색" in name:
+        out.append(b["colors9"])
+    if "포인트" in name:
+        out.append(b["accent"])
+    return out
+
+
 def title_of(p, lang):
-    fam = FAM_COPY[p["fam"]]
-    base = fam["title"][lang]
-    col = p["color"][lang]
-    extra = []
-    if p["size"]:
-        extra.append(p["size"])
-    if col:
-        extra.append(col)
-    pat = pattern_of(p["name_ko"], lang)
-    if pat and pat not in (col or ""):
-        extra.append(pat)
-    if p["pack"] and lang == "en":
-        extra.append(p["pack"])
-    if extra:
-        return base + " — " + ", ".join(extra)
-    return base
+    if p.get("titles") and p["titles"].get(lang):
+        return p["titles"][lang]
+    return _title_parts(p, lang)
+
+
+def _title_parts(p, lang):
+    name = p["name_ko"]
+    fam = p["fam"]
+    if fam == "foam":
+        base = None
+        for ko, label in FOAM_KIND[lang]:
+            if ko == "샌드" and "체크샌드" not in name and "샌드 폼" not in name and "샌드폼" not in name:
+                continue
+            if ko in name:
+                base = label
+                break
+        if not base:
+            base = {"en": "Self-adhesive foam wall panel", "ko": "점착식 폼 벽패널", "ja": "粘着フォーム壁パネル", "es": "Panel de espuma autoadhesivo"}[lang]
+    elif fam == "shower":
+        if "미니" in name:
+            base = {"en": "Mini travel shower filter set", "ko": "여행용 미니 샤워필터 세트", "ja": "旅行用ミニシャワーフィルターセット", "es": "Set mini de filtro de ducha"}[lang]
+        elif "보습" in name:
+            base = {"en": "Moisturizing vitamin shower filter", "ko": "보습 비타민 샤워필터", "ja": "保湿ビタミンシャワーフィルター", "es": "Filtro de ducha vitamínico hidratante"}[lang]
+        elif "3종" in name:
+            base = {"en": "Vitamin shower filter, 3 types", "ko": "비타민 샤워필터 3종", "ja": "ビタミンシャワーフィルター3種", "es": "Filtro de ducha vitamínico, 3 tipos"}[lang]
+        elif "1개+1개" in name:
+            base = {"en": "Vitamin shower filter, 2 pieces", "ko": "비타민 샤워필터 2개", "ja": "ビタミンシャワーフィルター2個", "es": "Filtro de ducha vitamínico, 2 piezas"}[lang]
+        elif "샤워기" in name and "필터" in name:
+            base = {"en": "Travel shower head with filter", "ko": "여행용 샤워기 필터", "ja": "旅行用シャワーヘッドとフィルター", "es": "Alcachofa de ducha de viaje con filtro"}[lang]
+        else:
+            base = FAM_COPY[fam]["title"][lang]
+    elif fam == "silk":
+        base = FAM_COPY["silk"]["title"][lang]
+        if "만능" in name and lang == "en":
+            base = "All-purpose silk insulation wallpaper"
+    else:
+        base = FAM_COPY[fam]["title"][lang]
+    def folded(s):
+        return re.sub(r"[^a-z0-9가-힣]", "", (s or "").lower())
+
+    parts = [base]
+    seen = {folded(base)}
+    def add(piece):
+        key = folded(piece)
+        if piece and key and not any(key in s or s in key for s in seen if len(s) > 2 and len(key) > 2):
+            parts.append(piece)
+            seen.add(key)
+    add(p["color"][lang])
+    add(p["size"])
+    pat = pattern_of(name, lang)
+    if pat:
+        for piece in pat.split(", "):
+            add(piece)
+    bits = _bits(name, lang)
+    if fam != "shower" and p["pack"] and not any(k in bits for k in (EXTRA_BITS[lang]["set12"], EXTRA_BITS[lang]["sheet1"])):
+        add(p["pack"])
+    for bit in bits:
+        add(bit)
+    if fam == "foam" and len(parts) == 1:
+        add({"en": "peel-and-stick insulation sheet", "ko": "점착 단열벽지", "ja": "貼る断熱シート", "es": "lámina aislante autoadhesiva"}[lang])
+    return ", ".join(parts)
+
+
+def assign_titles(products):
+    for lang in ("en", "ko", "ja", "es"):
+        groups = {}
+        for p in products:
+            groups.setdefault(_title_parts(p, lang), []).append(p)
+        for title, group in groups.items():
+            if len(group) == 1:
+                group[0].setdefault("titles", {})[lang] = title
+                continue
+            used = {}
+            for p in group:
+                label = title
+                # last resort so two listings never share a card name
+                n = 2
+                candidate = label
+                while candidate in used:
+                    candidate = f"{label} ({n})"
+                    n += 1
+                used[candidate] = p
+                p.setdefault("titles", {})[lang] = candidate
 
 
 def load_products():
@@ -633,11 +779,18 @@ def load_products():
             "color": color_of(raw["name_ko"]),
             "size": size_of(raw["name_ko"]),
             "pack": pack_of(raw["name_ko"]),
-            "mat": meta["mat"],
-            "origin": meta["origin"],
+            "mat": meta["mat"] if meta.get("factory") else "",
+            "origin": meta["origin"] if meta.get("factory") else "",
             "fallback": False,
         }
         products.append(p)
+    own_path = ROOT / "cushioni" / "own-images.json"
+    own = json.loads(own_path.read_text()) if own_path.exists() else {}
+    for p in products:
+        url = own.get(p["store_id"])
+        if url:
+            p["images"] = [url.split("?")[0]]
+            p["own_photo"] = True
     # family photo fallback
     pool = {}
     for p in products:
@@ -677,9 +830,32 @@ def load_products():
     for p in products:
         p["cid"] = existing.get(p["store_id"]) or alloc()
         p["ph"] = p["cid"].lower()
-    order = {c[0]: i for i, c in enumerate(CATS)}
-    products.sort(key=lambda p: (order[p["cat"]], title_of(p, "en").lower(), p["cid"]))
-    return products
+    assign_titles(products)
+
+    def diversify(items):
+        groups = {}
+        for p in items:
+            groups.setdefault(line_key(p["name_ko"]), []).append(p)
+        keys = list(groups)
+        out = []
+        while any(groups[k] for k in keys):
+            for k in keys:
+                if groups[k]:
+                    out.append(groups[k].pop(0))
+        return out
+
+    def mix(group):
+        cols = {slug: diversify([p for p in group if p["cat"] == slug]) for slug, _ in CATS}
+        out = []
+        while any(cols[slug] for slug, _ in CATS):
+            for slug, _ in CATS:
+                if cols[slug]:
+                    out.append(cols[slug].pop(0))
+        return out
+
+    own_photos = [p for p in products if not p["fallback"]]
+    shared = [p for p in products if p["fallback"]]
+    return mix(own_photos) + mix(shared)
 
 
 def download_images(products):
@@ -687,6 +863,8 @@ def download_images(products):
     IMG_T.mkdir(parents=True, exist_ok=True)
     cache = {}
     missing = []
+    sources_path = ROOT / "cushioni" / "image-sources.json"
+    sources = json.loads(sources_path.read_text()) if sources_path.exists() else {}
 
     def fetch(url):
         if url in cache:
@@ -708,13 +886,15 @@ def download_images(products):
             missing.append(p["cid"] + " " + p["name_ko"])
             continue
         ready = IMG_L / f"{p['ph']}.webp"
-        if ready.exists() and (IMG_T / f"{p['ph']}.jpg").exists():
+        src = p["images"][0]
+        prev = sources.get(p["ph"])
+        if ready.exists() and (IMG_T / f"{p['ph']}.jpg").exists() and prev == src:
             with Image.open(ready) as im0:
                 p["w"], p["h"] = im0.size
             with Image.open(IMG_T / f"{p['ph']}.jpg") as im1:
                 p["tw"], p["th"] = im1.size
             continue
-        im = fetch(p["images"][0])
+        im = fetch(src)
         if im is None:
             missing.append(p["cid"] + " " + p["name_ko"])
             p["images"] = []
@@ -730,6 +910,8 @@ def download_images(products):
         thumb.save(IMG_T / f"{p['ph']}.webp", "WEBP", quality=74, method=6)
         thumb.save(IMG_T / f"{p['ph']}.jpg", "JPEG", quality=78, optimize=True)
         p["tw"], p["th"] = thumb.size
+        sources[p["ph"]] = src
+        sources_path.write_text(json.dumps(sources, ensure_ascii=False, indent=2))
     return missing
 
 
@@ -964,19 +1146,20 @@ def product_ld(p, lang, url):
         "description": desc_of(p, lang),
         "sku": p["cid"],
         "category": dict(CATS)[p["cat"]][lang] if False else next(label[lang] for slug, label in CATS if slug == p["cat"]),
-        "material": p["mat"],
         "color": p["color"][lang] or None,
         "size": p["size"] or None,
         "image": absu(f"/assets/cs/img/l/{p['ph']}.webp"),
         "url": url,
         "brand": {"@type": "Brand", "name": "CUSHIONI"},
-        "manufacturer": {"@type": "Organization", "@id": "https://www.qone.kr/#org", "name": "QONE Corporation"},
-        "countryOfOrigin": "KR",
         "inLanguage": lang,
         "additionalProperty": [
             {"@type": "PropertyValue", "name": "Korean name", "value": p["name_ko"]},
         ],
     }
+    if FAM_COPY[p["fam"]].get("factory"):
+        data["material"] = p["mat"]
+        data["countryOfOrigin"] = "KR"
+        data["manufacturer"] = {"@type": "Organization", "@id": "https://www.qone.kr/#org", "name": "QONE Corporation"}
     if p["pack"]:
         data["additionalProperty"].append({"@type": "PropertyValue", "name": "Pack", "value": p["pack"]})
     # drop nulls
@@ -1082,9 +1265,9 @@ def build_product(p, lang, products):
         (u["cat"], next(lab[lang] for s, lab in CATS if s == p["cat"])),
         (u["size"], p["size"] or "—"),
         (u["color"], ", ".join(x for x in (p["color"][lang], pattern_of(p["name_ko"], lang)) if x) or "—"),
-        (u["mat"], p["mat"]),
+        (u["mat"], p["mat"] or "—"),
         (u["pack"], p["pack"] or "—"),
-        (u["origin"], p["origin"]),
+        (u["origin"], p["origin"] or "—"),
     ]
     dl = "".join(f"<dt>{esc(k)}</dt><dd>{esc(v)}</dd>" for k, v in rows)
     alt = alt_of(p, lang)
