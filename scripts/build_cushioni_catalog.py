@@ -44,6 +44,17 @@ REMOVED_STORE_IDS = {
     "13622474755", "13622474756", "13622474757", "13622474758",
 }
 
+# Owner-supplied photos (web/*.jpg). Color chips around 210 px stay at native size.
+OWNER_PHOTO_IDS = {
+    "C-0002", "C-0006", "C-0011", "C-0013", "C-0014", "C-0015", "C-0016", "C-0017",
+    "C-0018", "C-0020", "C-0021", "C-0022", "C-0023", "C-0025", "C-0026", "C-0027",
+    "C-0028", "C-0030", "C-0031", "C-0032", "C-0033", "C-0034", "C-0036", "C-0038",
+    "C-0040", "C-0043", "C-0047", "C-0049", "C-0051", "C-0054", "C-0056", "C-0058",
+    "C-0059", "C-0062", "C-0065", "C-0067", "C-0068", "C-0069", "C-0072", "C-0076",
+    "C-0077", "C-0079", "C-0080", "C-0097", "C-0106", "C-0108", "C-0110",
+}
+CHIP_MAX = 320
+
 EXTRA = [
     {"id": "10512486547", "name_ko": "쿠셔니 70cm x 2.5m 만능벽지 셀프도배 스티커접착식 폼벽지", "images": [], "blurb_ko": "기존 벽지 위에 붙이는 셀프도배용 실크 단열벽지입니다.", "src": "silk"},
     {"id": "10032351303", "name_ko": "쿠셔니 붙이는벽지 실크 단열 스티커 결로방지 셀프도배 폭 50cm 2.5m, 바이올렛", "images": [], "blurb_ko": "기존 벽지 위에 붙이면 도배가 끝나는 셀프 도배용 실크벽지입니다.", "src": "silk"},
@@ -859,12 +870,20 @@ def load_products():
     for p in products:
         p["cid"] = existing.get(p["store_id"]) or alloc()
         p["ph"] = p["cid"].lower()
+        if p["cid"] in OWNER_PHOTO_IDS:
+            p["fallback"] = False
+            p["owner_photo"] = True
     assign_titles(products)
+    return products
 
+
+def arrange_products(products):
     def diversify(items):
         groups = {}
         for p in items:
             groups.setdefault(line_key(p["name_ko"]), []).append(p)
+        for group in groups.values():
+            group.sort(key=lambda p: (1 if p.get("chip") else 0, p["cid"]))
         keys = list(groups)
         out = []
         while any(groups[k] for k in keys):
@@ -882,9 +901,44 @@ def load_products():
                     out.append(cols[slug].pop(0))
         return out
 
-    own_photos = [p for p in products if not p["fallback"]]
-    shared = [p for p in products if p["fallback"]]
-    return mix(own_photos) + mix(shared)
+    owner = [p for p in products if p.get("owner_photo")]
+    other = [p for p in products if not p.get("fallback") and not p.get("owner_photo")]
+    shared = [p for p in products if p.get("fallback")]
+    return mix(owner) + mix(other) + mix(shared)
+
+
+def install_owner_photos(products):
+    """Replace line photos with the owner's JPEGs. Metadata is dropped; chips are not enlarged."""
+    IMG_L.mkdir(parents=True, exist_ok=True)
+    IMG_T.mkdir(parents=True, exist_ok=True)
+    src_dir = Path("/tmp/owner-photos/web")
+    sources_path = ROOT / "cushioni" / "image-sources.json"
+    sources = json.loads(sources_path.read_text()) if sources_path.exists() else {}
+    installed = 0
+    missing = []
+    for p in products:
+        if p["cid"] not in OWNER_PHOTO_IDS:
+            continue
+        raw = src_dir / f"{p['ph']}.jpg"
+        if not raw.exists():
+            if sources.get(p["ph"]) != "owner":
+                missing.append(p["cid"])
+            continue
+        im = Image.open(raw).convert("RGB")
+        clean = Image.frombytes("RGB", im.size, im.tobytes())
+        large = clean.copy()
+        large.thumbnail((960, 960))
+        large.save(IMG_L / f"{p['ph']}.webp", "WEBP", quality=78, method=6)
+        large.save(IMG_L / f"{p['ph']}.jpg", "JPEG", quality=82, optimize=True)
+        thumb = clean.copy()
+        thumb.thumbnail((420, 420))
+        thumb.save(IMG_T / f"{p['ph']}.webp", "WEBP", quality=74, method=6)
+        thumb.save(IMG_T / f"{p['ph']}.jpg", "JPEG", quality=78, optimize=True)
+        sources[p["ph"]] = "owner"
+        installed += 1
+    sources_path.write_text(json.dumps(sources, ensure_ascii=False, indent=2))
+    print("owner photos written", installed, "missing", missing)
+    return installed
 
 
 def download_images(products):
@@ -917,6 +971,15 @@ def download_images(products):
         ready = IMG_L / f"{p['ph']}.webp"
         src = p["images"][0]
         prev = sources.get(p["ph"])
+        if prev == "owner" and ready.exists() and (IMG_T / f"{p['ph']}.jpg").exists():
+            with Image.open(ready) as im0:
+                p["w"], p["h"] = im0.size
+            with Image.open(IMG_T / f"{p['ph']}.jpg") as im1:
+                p["tw"], p["th"] = im1.size
+            p["fallback"] = False
+            p["owner_photo"] = True
+            p["chip"] = max(p["w"], p["h"]) <= CHIP_MAX
+            continue
         if ready.exists() and (IMG_T / f"{p['ph']}.jpg").exists() and prev == src:
             with Image.open(ready) as im0:
                 p["w"], p["h"] = im0.size
@@ -1027,7 +1090,7 @@ def head(title, desc, canon, path_fn, image):
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap">
 <link rel="stylesheet" href="/assets/yw/yw.css?v=cs1">
-<link rel="stylesheet" href="/assets/cs/cs.css?v=cs1">
+<link rel="stylesheet" href="/assets/cs/cs.css?v=cs2">
 {GTAG}
 """
 
@@ -1145,7 +1208,7 @@ def yw_boot(lang, products=None):
             "subj": u["subj"],
         },
     }
-    return "<script>window.CS=" + json.dumps(boot, ensure_ascii=False) + ";window.CSI=" + json.dumps(csi, ensure_ascii=False) + ";</script>\n<script src=\"/assets/cs/cs.js?v=cs1\" defer></script>"
+    return "<script>window.CS=" + json.dumps(boot, ensure_ascii=False) + ";window.CSI=" + json.dumps(csi, ensure_ascii=False) + ";</script>\n<script src=\"/assets/cs/cs.js?v=cs2\" defer></script>"
 
 
 def card(p, lang, eager=False):
@@ -1158,8 +1221,9 @@ def card(p, lang, eager=False):
     lazy = "" if eager else ' loading="lazy" decoding="async"'
     pri = ' fetchpriority="high"' if eager else ""
     w, h = p.get("tw", 320), p.get("th", 320)
+    chip = " is-chip" if p.get("chip") else ""
     return (
-        f'<li class="pc" id="{p["cid"]}" data-id="{p["cid"]}" data-c="{p["cat"]}" data-q="{esc(q)}" '
+        f'<li class="pc{chip}" id="{p["cid"]}" data-id="{p["cid"]}" data-c="{p["cat"]}" data-q="{esc(q)}" '
         f'data-n="{esc(name)}" data-ko="{esc(p["name_ko"])}" data-s="{esc(p["size"])}" data-opt="{esc(opt)}" '
         f'data-mt="{esc(p["mat"])}" data-p="{esc(p["pack"])}" data-o="{esc(p["origin"])}" data-d="{esc(desc_of(p, lang))}" '
         f'data-alt="{esc(alt)}" data-ph="{p["ph"]}" data-w="{p.get("w",800)}" data-h="{p.get("h",800)}">'
@@ -1311,7 +1375,7 @@ def build_product(p, lang, products):
     body = f"""<main id="main">
 <section class="ph peg"><div class="wrap">{crumb}</div></section>
 <div class="wrap pd">
-  <div class="pd-ph"><picture><source type="image/webp" srcset="/assets/cs/img/l/{p['ph']}.webp"><img src="/assets/cs/img/l/{p['ph']}.jpg" alt="{esc(alt)}" width="{p.get('w',800)}" height="{p.get('h',800)}"></picture></div>
+  <div class="pd-ph{' is-chip' if p.get('chip') else ''}"><picture><source type="image/webp" srcset="/assets/cs/img/l/{p['ph']}.webp"><img src="/assets/cs/img/l/{p['ph']}.jpg" alt="{esc(alt)}" width="{p.get('w',800)}" height="{p.get('h',800)}"></picture></div>
   <div>
     <p class="kick">{esc(p['cid'])}</p>
     <h1>{esc(name)}</h1>
@@ -1648,7 +1712,9 @@ def main():
     print("products", len(products))
     for slug, _ in CATS:
         print(slug, sum(1 for p in products if p["cat"] == slug))
+    install_owner_photos(products)
     missing = download_images(products)
+    products = arrange_products(products)
     print("missing images", len(missing))
     products = [p for p in products if (IMG_T / f"{p['ph']}.jpg").exists()]
     print("with images", len(products))

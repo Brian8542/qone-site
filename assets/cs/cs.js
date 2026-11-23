@@ -79,7 +79,10 @@
     if (!md || !li) return; cur = li; var D = li.dataset;
     var src = $('source', md), img = $('img', md);
     img.src = '/assets/cs/img/l/' + D.ph + '.jpg'; src.srcset = '/assets/cs/img/l/' + D.ph + '.webp'; img.alt = D.alt || D.n;
-    var w = +D.w || 800, h = +D.h || 800, k = 440 / Math.max(w, h); img.width = Math.round(w * k); img.height = Math.round(h * k);
+    var w = +D.w || 800, h = +D.h || 800, side = Math.max(w, h);
+    var cap = side <= 320 ? side : 440, k = cap / side;
+    img.width = Math.round(w * k); img.height = Math.round(h * k);
+    img.classList.toggle('is-chip', side <= 320);
     $('.md-ref', md).textContent = D.id + (D.ko ? '  ·  ' + D.ko : '');
     $('#md-n').textContent = D.n;
     var desc = $('#md-d', md); if (desc) desc.textContent = D.d || '';
